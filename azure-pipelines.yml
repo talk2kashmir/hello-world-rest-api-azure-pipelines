@@ -15,7 +15,7 @@ variables:
   webAppName: 'hello-world-rest-api-kash'
 
   # Environment name
-  environmentName: 'hello-world-rest-api-v2-in28minutes'
+  environmentName: 'hello-world-rest-api-kash'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

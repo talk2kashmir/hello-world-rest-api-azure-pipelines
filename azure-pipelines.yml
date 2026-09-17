@@ -12,7 +12,7 @@ variables:
   azureSubscription: '5f57a285-3d91-4dbe-81af-8660fd4b4701'
 
   # Web app name
-  webAppName: 'hello-world-rest-api-kash'
+  webAppName: 'hello-world-rest-api-v2-in28minutes'
 
   # Environment name
   environmentName: 'hello-world-rest-api-v2-in28minutes'
@@ -67,7 +67,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: hello-world-rest-api-kash'
+            displayName: 'Azure Web App Deploy: hello-world-rest-api-v2-in28minutes'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux

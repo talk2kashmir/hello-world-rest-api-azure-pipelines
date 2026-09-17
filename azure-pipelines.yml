@@ -12,10 +12,10 @@ variables:
   azureSubscription: '5f57a285-3d91-4dbe-81af-8660fd4b4701'
 
   # Web app name
-  webAppName: 'hello-world-rest-api-v2-in28minutes'
+  webAppName: 'hello-world-rest-api-kash'
 
   # Environment name
-  environmentName: 'hello-world-rest-api-v2-in28minutes'
+  environmentName: 'hello-world-rest-api-kash'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -67,9 +67,9 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: hello-world-rest-api-v2-in28minutes'
+            displayName: 'Azure Web App Deploy: hello-world-rest-api-kash'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
               appName: $(webAppName)
-              package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
+              package: '$(Pipeline.Workspace)/drop/target/hello-world-rest-api.jar'

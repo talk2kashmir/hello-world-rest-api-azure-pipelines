@@ -14,6 +14,9 @@ variables:
   # Web app name
   webAppName: 'hello-world-rest-api-kash'
 
+  # Azure DevOps environment name
+  environmentName: 'hello-world-rest-api-v2-in28minutes'
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
@@ -56,6 +59,7 @@ stages:
   jobs:
   - deployment: DeployLinuxWebApp
     displayName: Deploy Linux Web App
+    environment: $(environmentName)
     pool:
       vmImage: $(vmImageName)
     strategy:
